@@ -1,0 +1,65 @@
+/* reset browser default styling*/
+/* border-box tells the browser to account for any border and padding 
+in the values you specify for an element's width and height. If you 
+set an element's width to 100 pixels, that 100 pixels will include 
+any border or padding you added, and the content box will shrink to 
+absorb that extra width.
+*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: no-repeat center center fixed;
+  background-size: cover;
+  /*background: linear-gradient(rgb(0, 100, 200), rgb(100, 150, 100));*/
+  color: black;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  display: flex;
+  /* by default elements will display in a row, modify it to column*/
+  flex-direction: column;
+  /* horizontal center align */
+  align-items: center;
+  /* */
+  justify-content: center;
+  text-align: center;
+  /* height: 100vh; means the height of this element is equal to 100% of the viewport height. */
+  height: 100vh;
+}
+
+#time {
+  font-size: 8rem;
+}
+
+h1 {
+  margin: 3rem;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+
+@media (max-width: 700px) {
+  #time {
+    font-size: 6rem;
+  }
+}
+
+.glow {
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
+      0 0 40px #e60073, 0 0 50px #f3072e, 0 0 60px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
+      0 0 50px #ff4da6, 0 0 60px #e60073;
+  }
+}
